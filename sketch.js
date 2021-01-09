@@ -8,16 +8,16 @@ function preload(){
     flameImg = loadImage("flame.png");
 }
 function setup(){
-  hot = createSprite(displayWidth/2, displayHeight/2, 50, 75)
+  hot = createSprite(windowWidth/2, windowHeight/2, 50, 75)
   hot.addImage(flameImg);
   hot.scale = 0.225;
   backgroundImg.scale = 0.5;
-    createCanvas(displayWidth, displayHeight);      
+    createCanvas(windowWidth, windowHeight);      
  ;
 }
 function draw(){
   //background(rgb(198,135,103));
-  image(backgroundImg, 0,-displayHeight*4,displayWidth*2, displayHeight*5);   
+  image(backgroundImg, 0,-windowHeight*4,windowWidth*2,windowHeight*5);   
      if(keyIsDown(DOWN_ARROW)){
     hot.y = hot.y + 10;
   }
@@ -39,7 +39,7 @@ function draw(){
 }
 
 function reset(){
-  image(backgroundImg, 0,-displayHeight*4,displayWidth*2, displayHeight*5);   
-  hot.x = displayWidth/2;
-  hot.y = displayHeight/2;
+  image(backgroundImg, 0,-windowHeight*4,windowWidth*2, windowHeight*5);   
+  hot.x = windowWidth/2;
+  hot.y = windowHeight/2;
 }
